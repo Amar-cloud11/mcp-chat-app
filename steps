@@ -1,0 +1,65 @@
+model context protocol - MCP
+# install uv
+python -m pip install uv
+
+# create the project
+uv init weather
+cd weather
+
+# create + activate the venv
+uv venv
+.venv\Scripts\activate
+
+# install the MCP SDK
+uv add "mcp[cli]"  / uv add "mcp[cli]<2"
+
+# create first server
+ weather / server.py 
+
+# to run py file excute the command in terminal 
+uv run mcp dev weather.py
+
+# to open inspector 
+mcp dev weather.py
+
+_________________________________________________________
+clint
+_________________________________________________________
+
+# install pydantic
+uv add "mcp[cli]<2" pydantic
+
+# run client
+uv run python g_client_simple.py  
+
+_________________________________________________________
+fastAPI
+_________________________________________________________
+
+# create the basic api file 
+
+Install the dependencies from your project terminal:
+uv add fastapi "uvicorn[standard]"
+
+run the api server 
+uv run uvicorn basics:app --reload // basics replace your file name
+
+# open the server 
+http://127.0.0.1:8000/
+
+# open end point link
+http://127.0.0.1:8000/items/25
+
+# to open api document 
+http://127.0.0.1:8000/docs
+
+streaming.py
+
+
+____________________________________
+streamlit
+____________________________________
+uv add streamlit
+
+# to run streamlit python file
+uv run streamlit run filename.py
