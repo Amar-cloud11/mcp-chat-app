@@ -4,15 +4,16 @@ import streamlit as st
 
 # FastAPI backend address
 # API_URL = "http://127.0.0.1:8000"
-API_URL = "http://127.0.0.1:8001"
+# API_URL = "http://127.0.0.1:8001"
+API_URL =  "https://mcp-chat-app.onrender.com"
 CHAT_URL = f"{API_URL}/chat"
 HEALTH_URL = f"{API_URL}/health"
 
-st.set_page_config(
-    page_title="MCP Chat App",
-    page_icon="🤖",
-    layout="centered",
-)
+# st.set_page_config(
+#     page_title="MCP Chat App",
+#     page_icon="🤖",
+#     layout="centered",
+# )
 
 st.title("🤖 MCP Chat Assistant")
 st.caption("Powered by FastAPI + MCP ")
